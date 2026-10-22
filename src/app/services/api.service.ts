@@ -1,6 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 import { Hadith } from '../models/hadith.model';
 import { Zikr } from '../models/zikr.model';
 import { Reflection } from '../models/reflection.model';
@@ -11,7 +12,7 @@ import { Memorial } from '../models/memorial.model';
 })
 export class ApiService {
   private http = inject(HttpClient);
-  private baseUrl = 'http://localhost:5000/api';
+  private baseUrl = environment.apiUrl;
 
   // Stats & Seed
   getStats(): Observable<any> {
