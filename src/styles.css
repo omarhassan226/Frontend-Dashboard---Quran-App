@@ -3,40 +3,42 @@
   --primary-emerald-dark: #064e3b;
   --primary-emerald-light: #10b981;
   --primary-emerald-glow: rgba(16, 185, 129, 0.25);
-  
+
   --gold-accent: #d97706;
   --gold-light: #fbbf24;
   --gold-glow: rgba(245, 158, 11, 0.2);
-  
+
   --bg-deep: #090e17;
   --bg-surface: #0f172a;
   --bg-surface-elevated: #1e293b;
   --bg-surface-glass: rgba(15, 23, 42, 0.85);
-  
+
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-emerald: rgba(16, 185, 129, 0.25);
   --border-gold: rgba(217, 119, 6, 0.3);
-  
+
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
   --text-gold: #fde68a;
   --text-emerald: #6ee7b7;
-  
+
   --font-ui: 'Cairo', system-ui, -apple-system, sans-serif;
   --font-hadith: 'Amiri', 'Cairo', serif;
-  
+
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
   --radius-xl: 28px;
   --radius-full: 9999px;
-  
+
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
   --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -73,8 +75,11 @@ body.light-theme {
 body::before {
   content: '';
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
     radial-gradient(circle at 15% 15%, rgba(5, 150, 105, 0.15) 0%, transparent 40%),
     radial-gradient(circle at 85% 75%, rgba(217, 119, 6, 0.1) 0%, transparent 45%);
   pointer-events: none;
@@ -83,7 +88,7 @@ body::before {
 }
 
 body.light-theme::before {
-  background: 
+  background:
     radial-gradient(circle at 15% 15%, rgba(16, 185, 129, 0.1) 0%, transparent 40%),
     radial-gradient(circle at 85% 75%, rgba(217, 119, 6, 0.08) 0%, transparent 45%);
 }
@@ -260,13 +265,16 @@ body.light-theme::before {
   width: 8px;
   height: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-deep);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--bg-surface-elevated);
   border-radius: var(--radius-full);
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-emerald);
 }
@@ -277,6 +285,8 @@ body.light-theme .lock-card {
   background: #ffffff !important;
   border-color: rgba(15, 23, 42, 0.1) !important;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06) !important;
+  padding: 1rem;
+  border-radius: 16px;
 }
 
 body.light-theme .card-glass {
@@ -391,5 +401,3 @@ body.light-theme .badge-rose {
   color: #9f1239 !important;
   border-color: #fecdd3 !important;
 }
-
-
